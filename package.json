@@ -1,0 +1,25 @@
+{
+  "name": "dynamic-remotes",
+  "workspaces": [
+    "./app1",
+    "./app2"
+  ],
+  "private": true,
+  "description": "Basic demo of a host app loading remote components and dynamically sharing vendor code with unknown remotes, or without a Federation Plugin",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "cross-env FEDERATION_DEBUG=true pnpm --parallel start",
+    "legacy:start": "pnpm --parallel legacy:start",
+    "build": "pnpm --parallel build",
+    "serve": "pnpm --parallel serve",
+    "clean": "pnpm --parallel clean"
+  },
+  "devDependencies": {
+    "wait-on": "7.2.0"
+  },
+  "dependencies": {
+    "@module-federation/enhanced": "^0.1.4",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.4.5"
+  }
+}
