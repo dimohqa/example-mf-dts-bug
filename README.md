@@ -1,9 +1,9 @@
-app1 and app2 start on host:
-```
-localhost.example.com
-```
+app1 - host
 
-Before run edit /etc/hosts:
+app2 - remote
+
+# Start
+
 ```
-127.0.0.1 localhost.example.com
+npm run start
 ```

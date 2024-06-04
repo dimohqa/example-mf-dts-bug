@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
     "sourceMap": true,
+    "module": "ESNext",
+    "target": "es2015",
+    "lib": ["dom", "esnext", "scripthost"],
     "strict": true,
     "baseUrl": ".",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "*": ["./@mf-types/*"]
     },
-    "jsx": "react-jsx"
+    "jsx": "react",
   },
   "include": ["src/**/*"]
 }

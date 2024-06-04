@@ -11,15 +11,14 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    server: 'https',
-    host: 'localhost.example.com',
+    // server: 'https',
     port: 3002,
     headers: {
-      'Access-Control-Allow-Origin': 'https://localhost.example.com:3001',
+      'Access-Control-Allow-Origin': 'http://localhost:3001',
     },
   },
   output: {
-    publicPath: 'https://localhost.example.com:3002/',
+    publicPath: 'http://localhost:3002/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -28,11 +27,11 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'babel-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
-        options: {
-          presets: ['@babel/preset-react', '@babel/preset-typescript'],
-        },
+        // options: {
+        //   presets: ['@babel/preset-react', '@babel/preset-typescript'],
+        // },
       },
     ],
   },

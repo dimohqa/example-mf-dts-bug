@@ -8,7 +8,7 @@
   "description": "Basic demo of a host app loading remote components and dynamically sharing vendor code with unknown remotes, or without a Federation Plugin",
   "version": "0.0.0",
   "scripts": {
-    "start": "cross-env FEDERATION_DEBUG=true pnpm --parallel start",
+    "start": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 FEDERATION_DEBUG=true pnpm --parallel start",
     "legacy:start": "pnpm --parallel legacy:start",
     "build": "pnpm --parallel build",
     "serve": "pnpm --parallel serve",
@@ -18,8 +18,9 @@
     "wait-on": "7.2.0"
   },
   "dependencies": {
-    "@module-federation/enhanced": "^0.1.4",
+    "@module-federation/enhanced": "^0.1.12",
     "cross-env": "^7.0.3",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.4.5"
   }
 }

@@ -11,12 +11,11 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    host: 'localhost.example.com',
-    server: 'https',
+    // server: 'https',
     port: 3001,
   },
   output: {
-    publicPath: 'https://localhost.example.com:3001/',
+    publicPath: 'http://localhost:3001/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -25,11 +24,11 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'babel-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
-        options: {
-          presets: ['@babel/preset-react', '@babel/preset-typescript'],
-        },
+        // options: {
+        //   presets: ['@babel/preset-react', '@babel/preset-typescript'],
+        // },
       },
     ],
   },
@@ -38,7 +37,7 @@ module.exports = {
       name: 'app1',
       filename: 'remoteEntry.js',
       remotes: {
-        app2: 'app2@https://localhost.example.com:3002/mf-manifest.json',
+        app2: 'app2@http://localhost:3002/mf-manifest.json',
       },
       shared: [{
         react: {
